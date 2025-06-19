@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prince Masale</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <div
+    id="cart-toast"
+    style="
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    "
+  >
+    <span style="font-weight: bold; margin-right: 8px">✔</span> Item added to
+    cart!
+  </div>
+
+  <body>
+    <!-- 🔝 Top Bar -->
+    <div class="top-bar">
+      🚚 Free Delivery on Orders Above ₹299 | Special Offers Everyday!
+    </div>
+
+    <!-- 🧭 Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">🌶️ <span>Prince Masale</span></div>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Products <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">CTC Spices</a></li>
+              <li><a href="#">Blended Spices</a></li>
+              <li><a href="#">Quick Fry</a></li>
+              <li><a href="#">Sprinkler</a></li>
+              <li><a href="#">Combos</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Sales <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Summer Sale 🌞</a></li>
+              <li><a href="#">Winter Sale ❄️</a></li>
+              <li><a href="#">Mother's Day 💐</a></li>
+              <li><a href="#">Festive Sale 🪔</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+        <div class="icons">
+          <div class="icon-wrapper">
+            <i class="fas fa-heart" title="Wishlist"></i>
+            <span class="icon-label">Wishlist</span>
+          </div>
+          <div class="icon-wrapper">
+            <i class="fas fa-user" title="Account"></i>
+            <span class="icon-label">Your Account</span>
+          </div>
+          <div class="icon-wrapper">
+            <i class="fas fa-shopping-cart" title="Cart">
+              <span class="cart-count">0</span>
+            </i>
+            <span class="icon-label">Your Cart</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 📸 Banner Section -->
+    <section class="banner">
+      <img src="spicesBanner.jpg" alt="Big Sale" />
+      <div class="banner-content">
+        <h1>Spice Up Your Life!</h1>
+        <p>Get Flat 30% Off on Monthly Saver Packs</p>
+        <button>Shop Now</button>
+      </div>
+    </section>
+
+    <!-- 🛍️ Favorite Products -->
+    <section class="products-section">
+      <h2>Everyone’s Favorite</h2>
+      <div class="product-grid">
+        <!-- Card 1: Red Chilli Powder -->
+        <div class="product-card">
+          <span class="sale-badge">🔥 45% OFF</span>
+          <img src="redchillipowder.jpg" alt="Red Chilli Powder" />
+          <h3>Red Chilli Powder</h3>
+          <p class="product-rating">⭐ 4.7</p>
+          <p class="price">₹110 <span>₹200</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Card 2: Turmeric Powder -->
+        <div class="product-card">
+          <span class="sale-badge">🔥 30% OFF</span>
+          <img src="turmeric.jpg" alt="Turmeric Powder" />
+          <h3>Turmeric Powder</h3>
+          <p class="product-rating">⭐ 4.5</p>
+          <p class="price">₹70 <span>₹100</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Card 3: Coriander Powder -->
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="coriander.jpg" alt="Coriander Powder" />
+          <h3>Coriander Powder</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Add more cards as needed -->
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="kitchenking.jpg" alt="Kitchen King" />
+          <h3>Kitchen King Masala</h3>
+          <p class="product-rating">⭐ 4.3</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="achar.jpg" alt="Achar Masala" />
+          <h3>Achar Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="jeera.jpg" alt="Jeera Powder" />
+          <h3>Jeera Powder</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="raitachach.jpg" alt="Raita Chach Masala" />
+          <h3>Raita Chach Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="garadu.jpg" alt="Garadu Masala" />
+          <h3>Garadu Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="ginger.jpg" alt="Ginger Masala" />
+          <h3>Ginger Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="whitepepper.jpg" alt="White Pepper Powder" />
+          <h3>White Pepper Powder</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="dumaloo.jpg" alt="Dum Aloo Masala" />
+          <h3>Dum Aloo Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="blackpepper.jpg" alt="Black Pepper Powder" />
+          <h3>Black Pepper Powder</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="amchoor.jpg" alt="Amchoor Powder" />
+          <h3>Amchoor Powder</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="chana.jpg" alt="Chana Masala" />
+          <h3>Chana Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="garammasala.jpg" alt="Garam Masala" />
+          <h3>Garam Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="sambhar.jpg" alt="Sambhar Masala" />
+          <h3>Sambhar Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="pavbhaji.jpg" alt="Pav Bhaji Masala" />
+          <h3>Pav Bhaji Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="chaat.jpg" alt="Chaat Masala" />
+          <h3>Chaat Masala</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <span class="sale-badge">🔥 25% OFF</span>
+          <img src="kasuri.jpg" alt="Kasuri Methi" />
+          <h3>Kasuri Methi</h3>
+          <p class="product-rating">⭐ 4.6</p>
+          <p class="price">₹60 <span>₹80</span></p>
+          <div class="quantity-controls">
+            <button class="qty-btn">-</button>
+            <input type="number" value="1" min="1" />
+            <button class="qty-btn">+</button>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-content">
+          <p>&copy; 2025 Prince Masale. All rights reserved.</p>
+          <p>Made with ❤ for spice lovers!</p>
+        </div>
+            
+      </footer>
+    </section>
+  </body>
+</html>
