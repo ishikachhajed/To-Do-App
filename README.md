@@ -16,14 +16,6 @@ A sleek and interactive To-Do app built using **HTML**, **CSS**, and **JavaScrip
 - **CSS**
 - **JavaScript**
 
-## 📸 Screenshots
-
-*(Add screenshots here if you have any)*
-
-## 🧠 Inspiration
-
-This project was built to combine **functionality with fun** — motivating users to complete tasks with visual satisfaction.
-
   📁 ToDo-App/
 ├── index.html
 ├── style.css
